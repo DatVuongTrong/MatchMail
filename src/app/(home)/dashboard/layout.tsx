@@ -12,7 +12,7 @@ export default function AuthLayout({
             }}
         >
             <div className="w-full h-20">
-                <NavigationBar />
+                <NavigationBar isAuthPage={false} />
             </div>
             <div
                 style={{
