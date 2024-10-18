@@ -1,4 +1,4 @@
-import { NavigationBar } from "@/components/navbar";
+import { NavigationBar } from "@/components/navbar/navbar";
 
 export default function AuthLayout({
     children,
@@ -16,7 +16,7 @@ export default function AuthLayout({
             </div>
             <div
                 style={{
-                    display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw', alignItems: 'center', justifyContent: 'center'
+                    display: 'flex', flexDirection: 'column', height: '100vh', width: '100vw'
                 }}
             >{children}</div>
         </div >
