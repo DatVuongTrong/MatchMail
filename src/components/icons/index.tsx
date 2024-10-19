@@ -9,5 +9,7 @@ import { NameIcon } from "./name-icon";
 import { EmailIcon } from "./email-icon";
 import { PhoneIcon } from "./phone-icon";
 import { EditIcon } from "./edit-icon";
+import { FileIcon } from "./file-icon";
+import { EyeIcon } from "./eye-icon";
 
-export { HomeIcon, AddIcon, ProfileIcon, DatabaseIcon, NotificationIcon, LinkedInIcon, LinkIcon, NameIcon, EmailIcon, PhoneIcon, EditIcon };
+export { HomeIcon, AddIcon, ProfileIcon, DatabaseIcon, NotificationIcon, LinkedInIcon, LinkIcon, NameIcon, EmailIcon, PhoneIcon, EditIcon, FileIcon, EyeIcon };

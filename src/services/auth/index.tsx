@@ -19,6 +19,7 @@ export const loginUser = async (loginUserInput: LoginUserInput) => {
         if (response.ok) {
             cookies().set('access_token', data.access_token)
             cookies().set('refresh_token', data.refresh_token)
+            cookies().set('user_id', data.user_id)
         }
 
         return { data, ok: response.ok };
