@@ -29,7 +29,7 @@ export default function LoginPage() {
                     console.log("successful signup");
                     toast.success("Login successful");
                     setTimeout(() => {
-                        router.replace("/dashboard");
+                        router.replace("/database");
                         setIsLoading(false);
                     }, 2000);
                 } else {

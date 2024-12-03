@@ -66,7 +66,7 @@ export const NavigationBar = ({ isAuthPage = true }) => {
                         </Link>
                     </Tooltip>
                 </NavbarItem>
-                <NavbarItem className="w-32 flex justify-center" isActive={currentRoute === '/dashboard'}>
+                {/* <NavbarItem className="w-32 flex justify-center" isActive={currentRoute === '/dashboard'}>
                     <Tooltip className="dark"
                         content={
                             <div className="px-1 py-2">
@@ -81,7 +81,7 @@ export const NavigationBar = ({ isAuthPage = true }) => {
                             <HomeIcon />
                         </Link>
                     </Tooltip>
-                </NavbarItem>
+                </NavbarItem> */}
                 <NavbarItem className="w-32 flex justify-center" isActive={currentRoute === '/database'}>
                     <Tooltip className="dark"
                         content={
