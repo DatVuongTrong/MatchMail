@@ -1,10 +1,19 @@
 
 interface ENV {
     API_SERVER: string | undefined;
+    MODEL_SERVER: string | undefined;
+    CLOUDINARY_CLOUD_NAME: string | undefined;
+    CLOUDINARY_API_KEY: string | undefined;
+    CLOUDINARY_API_SECRET: string | undefined;
+
 }
 
 interface Config {
     API_SERVER: string | undefined;
+    MODEL_SERVER: string | undefined
+    CLOUDINARY_CLOUD_NAME: string | undefined;
+    CLOUDINARY_API_KEY: string | undefined;
+    CLOUDINARY_API_SECRET: string | undefined;
 }
 
 // Loading process.env as ENV interface
@@ -12,6 +21,11 @@ interface Config {
 const getConfig = (): ENV => {
     return {
         API_SERVER: process.env["NEXT_PUBLIC_API_SERVER"],
+        MODEL_SERVER: process.env["NEXT_PUBLIC_MODEL_SERVER"],
+        CLOUDINARY_CLOUD_NAME: process.env["NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME"],
+        CLOUDINARY_API_KEY: process.env["NEXT_PUBLIC_CLOUDINARY_API_KEY"],
+        CLOUDINARY_API_SECRET: process.env["CLOUDINARY_API_SECRET"],
+
     };
 };
 
@@ -22,11 +36,11 @@ const getConfig = (): ENV => {
 // definition.
 
 const getSanitzedConfig = (config: ENV): Config => {
-    // for (const [key, value] of Object.entries(config)) {
-    //     if (value === undefined) {
-    //         throw new Error(`Missing key ${key} in .env`);
-    //     }
-    // }
+    for (const [key, value] of Object.entries(config)) {
+        if (value === undefined) {
+            throw new Error(`Missing key ${key} in .env`);
+        }
+    }
     return config as Config;
 };
 
