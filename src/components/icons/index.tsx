@@ -11,5 +11,7 @@ import { PhoneIcon } from "./phone-icon";
 import { EditIcon } from "./edit-icon";
 import { FileIcon } from "./file-icon";
 import { EyeIcon } from "./eye-icon";
+import { TrashIcon } from "./trash-icon";
+import { LockIcon } from "./lock-icon";
 
-export { HomeIcon, AddIcon, ProfileIcon, DatabaseIcon, NotificationIcon, LinkedInIcon, LinkIcon, NameIcon, EmailIcon, PhoneIcon, EditIcon, FileIcon, EyeIcon };
+export { HomeIcon, AddIcon, ProfileIcon, DatabaseIcon, NotificationIcon, LinkedInIcon, LinkIcon, NameIcon, EmailIcon, PhoneIcon, EditIcon, FileIcon, EyeIcon, TrashIcon, LockIcon };

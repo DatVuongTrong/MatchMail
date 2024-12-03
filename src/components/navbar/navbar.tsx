@@ -1,13 +1,20 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
     Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Avatar, Tooltip
 } from "@nextui-org/react";
 import { HomeIcon, AddIcon, ProfileIcon, DatabaseIcon, NotificationIcon } from "../icons";
+import { logoutUser } from '@/services/auth';
 
 export const NavigationBar = ({ isAuthPage = true }) => {
     const currentRoute = usePathname()
+    const router = useRouter();
+
+    const handleLogOut = () => {
+        logoutUser();
+        router.replace("/login");
+    }
     return isAuthPage ? (
         <Navbar isBlurred isBordered maxWidth="full" height="5rem" className="dark">
             <NavbarBrand>
@@ -97,14 +104,14 @@ export const NavigationBar = ({ isAuthPage = true }) => {
                     <Tooltip className="dark"
                         content={
                             <div className="px-1 py-2">
-                                <div className="text-md">Add recruiters</div>
+                                <div className="text-md">Add email</div>
                             </div>
                         }
                         delay={0}
                         closeDelay={0}
                         offset={25}
                     >
-                        <Link href="#">
+                        <Link href="/add_email">
                             <AddIcon />
                         </Link>
                     </Tooltip>
@@ -141,10 +148,10 @@ export const NavigationBar = ({ isAuthPage = true }) => {
                         <DropdownMenu variant="flat">
                             <DropdownItem key="profile" className="h-14 gap-8" href="profile">
                                 <p className="font-semibold" >Signed in as</p>
-                                <p className="font-semibold">zoey@example.com</p>
+                                <p className="font-semibold">trongdatvuong@gmail.com</p>
                             </DropdownItem>
                             <DropdownItem key="settings">Settings</DropdownItem>
-                            <DropdownItem key="logout" color="danger">
+                            <DropdownItem key="logout" color="danger" onClick={handleLogOut}>
                                 Log Out
                             </DropdownItem>
                         </DropdownMenu>
